@@ -2,9 +2,9 @@
 
 namespace IaK\MakeTestable\Commands;
 
+use Illuminate\Routing\Console\MiddlewareMakeCommand as Command;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputOption;
-use Illuminate\Routing\Console\MiddlewareMakeCommand as Command;
 
 class MiddlewareMakeCommand extends Command
 {
@@ -42,7 +42,7 @@ class MiddlewareMakeCommand extends Command
     {
         return [
             ...parent::getOptions(),
-            ['test', 't', InputOption::VALUE_NONE, 'Generate a test for the middleware']
+            ['test', 't', InputOption::VALUE_NONE, 'Generate a test for the middleware'],
         ];
     }
 }

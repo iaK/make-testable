@@ -2,17 +2,16 @@
 
 namespace IaK\MakeTestable\Providers;
 
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\ServiceProvider;
-use IaK\MakeTestable\Commands\JobMakeCommand;
-use IaK\MakeTestable\Commands\EventMakeCommand;
-use IaK\MakeTestable\Commands\ModelMakeCommand;
 use IaK\MakeTestable\Commands\ConsoleMakeCommand;
-use IaK\MakeTestable\Commands\ListenerMakeCommand;
 use IaK\MakeTestable\Commands\ControllerMakeCommand;
+use IaK\MakeTestable\Commands\EventMakeCommand;
+use IaK\MakeTestable\Commands\JobMakeCommand;
+use IaK\MakeTestable\Commands\ListenerMakeCommand;
 use IaK\MakeTestable\Commands\MiddlewareMakeCommand;
-use Illuminate\Contracts\Support\DeferrableProvider;
+use IaK\MakeTestable\Commands\ModelMakeCommand;
 use IaK\MakeTestable\Commands\NotificationMakeCommand;
+use Illuminate\Contracts\Support\DeferrableProvider;
+use Illuminate\Support\ServiceProvider;
 
 class MakeTestableServiceProvider extends ServiceProvider implements DeferrableProvider
 {
@@ -81,7 +80,7 @@ class MakeTestableServiceProvider extends ServiceProvider implements DeferrableP
     public function provides()
     {
         return [
-            'command.make.model'
+            'command.make.model',
         ];
     }
 }

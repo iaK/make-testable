@@ -2,9 +2,9 @@
 
 namespace IaK\MakeTestable\Commands;
 
+use Illuminate\Routing\Console\ControllerMakeCommand as Command;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputOption;
-use Illuminate\Routing\Console\ControllerMakeCommand as Command;
 
 class ControllerMakeCommand extends Command
 {
@@ -41,7 +41,7 @@ class ControllerMakeCommand extends Command
     {
         return [
             ...parent::getOptions(),
-            ['test', 't', InputOption::VALUE_NONE, 'Generate a test for the controller']
+            ['test', 't', InputOption::VALUE_NONE, 'Generate a test for the controller'],
         ];
     }
 }

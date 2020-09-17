@@ -2,8 +2,8 @@
 
 namespace IaK\MakeTestable\Commands;
 
-use Illuminate\Support\Str;
 use Illuminate\Foundation\Console\NotificationMakeCommand as Command;
+use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputOption;
 
 class NotificationMakeCommand extends Command
@@ -42,7 +42,7 @@ class NotificationMakeCommand extends Command
     {
         return [
             ...parent::getOptions(),
-            ['test', 't', InputOption::VALUE_NONE, 'Generate a test for the notification']
+            ['test', 't', InputOption::VALUE_NONE, 'Generate a test for the notification'],
         ];
     }
 }

@@ -2,8 +2,8 @@
 
 namespace IaK\MakeTestable\Commands;
 
-use Illuminate\Support\Str;
 use Illuminate\Foundation\Console\ModelMakeCommand as Command;
+use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputOption;
 
 class ModelMakeCommand extends Command
@@ -42,7 +42,7 @@ class ModelMakeCommand extends Command
     {
         return [
             ...parent::getOptions(),
-            ['test', 't', InputOption::VALUE_NONE, 'Generate a test for the model']
+            ['test', 't', InputOption::VALUE_NONE, 'Generate a test for the model'],
         ];
     }
 }
