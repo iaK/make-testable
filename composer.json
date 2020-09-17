@@ -1,6 +1,6 @@
 {
     "name": "iak/make-testable",
-    "description": "Create a test along with your class, when using the laravel make commandrm",
+    "description": "Create a test along with any class created using the laravel make command",
     "keywords": [
         "iak",
         "make-testable"
