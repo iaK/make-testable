@@ -11,6 +11,7 @@ use IaK\MakeTestable\Commands\MiddlewareMakeCommand;
 use IaK\MakeTestable\Commands\ModelMakeCommand;
 use IaK\MakeTestable\Commands\NotificationMakeCommand;
 use Illuminate\Contracts\Support\DeferrableProvider;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
 
 class MakeTestableServiceProvider extends ServiceProvider implements DeferrableProvider
@@ -46,41 +47,29 @@ class MakeTestableServiceProvider extends ServiceProvider implements DeferrableP
     {
         if ($this->app->runningInConsole()) {
             $this->app->extend('command.make.model', function () {
-                return new ModelMakeCommand();
+                return new ModelMakeCommand(new Filesystem);
             });
             $this->app->extend('command.make.console', function () {
-                return new ConsoleMakeCommand();
+                return new ConsoleMakeCommand(new Filesystem);
             });
             $this->app->extend('controller.make.console', function () {
-                return new ControllerMakeCommand();
+                return new ControllerMakeCommand(new Filesystem);
             });
             $this->app->extend('event.make.console', function () {
-                return new EventMakeCommand();
+                return new EventMakeCommand(new Filesystem);
             });
             $this->app->extend('job.make.console', function () {
-                return new JobMakeCommand();
+                return new JobMakeCommand(new Filesystem);
             });
             $this->app->extend('listener.make.console', function () {
-                return new ListenerMakeCommand();
+                return new ListenerMakeCommand(new Filesystem);
             });
             $this->app->extend('notification.make.console', function () {
-                return new NotificationMakeCommand();
+                return new NotificationMakeCommand(new Filesystem);
             });
             $this->app->extend('middleware.make.console', function () {
-                return new MiddlewareMakeCommand();
+                return new MiddlewareMakeCommand(new Filesystem);
             });
         }
-    }
-
-    /**
-     * Provides services.
-     *
-     * @return void
-     */
-    public function provides()
-    {
-        return [
-            'command.make.model',
-        ];
     }
 }
