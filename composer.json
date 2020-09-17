@@ -1,6 +1,6 @@
 {
     "name": "iak/make-testable",
-    "description": "Create a test along with your class, when using the laravel make command",
+    "description": "Create a test along with your class, when using the laravel make commandrm",
     "keywords": [
         "iak",
         "make-testable"
@@ -10,7 +10,7 @@
     "authors": [{
         "name": "Isak Berglind",
         "email": "info@isakberglind.se",
-        "homepage": "https://spatie.be",
+        "homepage": "https://isakberglind.se",
         "role": "Developer"
     }],
     "require": {
