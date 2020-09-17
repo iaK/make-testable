@@ -11,7 +11,6 @@ use IaK\MakeTestable\Commands\MiddlewareMakeCommand;
 use IaK\MakeTestable\Commands\ModelMakeCommand;
 use IaK\MakeTestable\Commands\NotificationMakeCommand;
 use Illuminate\Contracts\Support\DeferrableProvider;
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
 
 class MakeTestableServiceProvider extends ServiceProvider implements DeferrableProvider
