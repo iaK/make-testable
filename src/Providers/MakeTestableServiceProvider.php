@@ -39,37 +39,21 @@ class MakeTestableServiceProvider extends ServiceProvider implements DeferrableP
     }
 
     /**
-     * Register any application services.
+     * Provides services.
      *
-     * @return void
+     * @return array
      */
-    public function register()
+    public function provides()
     {
-        if ($this->app->runningInConsole()) {
-            $this->app->extend('command.make.model', function () {
-                return new ModelMakeCommand(new Filesystem);
-            });
-            $this->app->extend('command.make.console', function () {
-                return new ConsoleMakeCommand(new Filesystem);
-            });
-            $this->app->extend('controller.make.console', function () {
-                return new ControllerMakeCommand(new Filesystem);
-            });
-            $this->app->extend('event.make.console', function () {
-                return new EventMakeCommand(new Filesystem);
-            });
-            $this->app->extend('job.make.console', function () {
-                return new JobMakeCommand(new Filesystem);
-            });
-            $this->app->extend('listener.make.console', function () {
-                return new ListenerMakeCommand(new Filesystem);
-            });
-            $this->app->extend('notification.make.console', function () {
-                return new NotificationMakeCommand(new Filesystem);
-            });
-            $this->app->extend('middleware.make.console', function () {
-                return new MiddlewareMakeCommand(new Filesystem);
-            });
-        }
+        return [
+            'command.make.model',
+            'command.make.console',
+            'command.make.controller',
+            'command.make.event',
+            'command.make.job',
+            'command.make.listener',
+            'command.make.notification',
+            'command.make.middleware',
+        ];
     }
 }
