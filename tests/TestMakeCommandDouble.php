@@ -26,7 +26,7 @@ class TestMakeCommandDouble extends TestMakeCommand
 
     public function isNotUnitTest()
     {
-        return !$this->isUnitTest();
+        return ! $this->isUnitTest();
     }
 
     public function wasCalled()
@@ -36,6 +36,6 @@ class TestMakeCommandDouble extends TestMakeCommand
 
     public function wasNotCalled()
     {
-        return !$this->wasCalled();
+        return ! $this->wasCalled();
     }
 }

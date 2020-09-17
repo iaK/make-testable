@@ -2,8 +2,8 @@
 
 namespace IaK\MakeTestable\Commands;
 
-use Illuminate\Support\Str;
 use Illuminate\Foundation\Console\ListenerMakeCommand as Command;
+use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputOption;
 
 class ListenerMakeCommand extends Command
@@ -42,7 +42,7 @@ class ListenerMakeCommand extends Command
     {
         return [
             ...parent::getOptions(),
-            ['test', 't', InputOption::VALUE_NONE, 'Generate a test for the listener']
+            ['test', 't', InputOption::VALUE_NONE, 'Generate a test for the listener'],
         ];
     }
 }

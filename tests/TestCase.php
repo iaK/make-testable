@@ -2,10 +2,9 @@
 
 namespace IaK\MakeTestable\Tests;
 
+use IaK\MakeTestable\Providers\MakeTestableServiceProvider;
 use Illuminate\Filesystem\Filesystem;
 use Orchestra\Testbench\TestCase as Orchestra;
-use IaK\MakeTestable\Tests\TestMakeCommandDouble;
-use IaK\MakeTestable\Providers\MakeTestableServiceProvider;
 
 class TestCase extends Orchestra
 {
