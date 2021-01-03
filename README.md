@@ -36,7 +36,7 @@ You can make tests for the following classes:
 
 ## Todo
 
-* Export a config file with customizable locations, naming convetions and options for the test command.
+* Export a config file with customizable locations, naming conventions and options for the test command.
 
 ## Installation
 
